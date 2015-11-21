@@ -1,0 +1,9 @@
+### Gulp output ###
+dist
+reports
+
+
+### misc ###
+node_modules
+.sass-cache
+.DS_Store
