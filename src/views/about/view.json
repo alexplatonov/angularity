@@ -1,0 +1,11 @@
+{
+    "viewName": "Home",
+    "description": "Angularity Home Page",
+    "keywords": "angular angularity modular",
+    "components": [
+        "pageHeader",
+        "pageFooter",
+        "loadingIndicator",
+        "cookieMessage"
+    ]
+}

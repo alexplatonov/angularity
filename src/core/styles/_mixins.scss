@@ -1,0 +1,68 @@
+
+// new clearfix (modern browser support)
+@mixin clearfix {
+    overflow: hidden;
+}
+
+// use this clearfix if you need overflow to be visible
+@mixin pie-clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin font($size: $font-size-base, $weight: normal) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin hide-text() {
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+@mixin no-flicker() {
+    -webkit-transform: translate3D(0,0,0);
+}
+
+// Mixin for x-browser hyphenation based on @auchenberg's post:
+// Removes the need for the <wbr/> HTML tag
+// http://blog.kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/
+@mixin hyphenation {
+    /* Non standard value that only works in webkit browsers */
+    word-break: break-word;
+    /* Supported in Firefox, Safari and IE10+ */
+    hyphens: auto;
+}
+
+// Fix for firefox weird button padding issue
+@mixin firefox-button-fix() {
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0
+    }
+}
+
+
+@mixin media($min-width: false, $max-width: false) {
+    @if ($min-width != false and $max-width != false) {
+        @media (min-width: $min-width) and (max-width: $max-width){
+            @content;
+        }
+    } @else if $max-width != false {
+        @media (max-width: $max-width){
+            @content;
+        }
+    } @else if $min-width != false {
+        @media (min-width: $min-width){
+            @content;
+        }
+    } @else {
+        @media (min-width: $min-width){
+            @content
+        }
+    }
+}
+

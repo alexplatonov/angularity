@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-family: $font-family-base;
+    background: $color-background;
+    color: $color-text;
+}
+
+h1, h2, h3, h4 {
+    margin: 0 0 20px;
+    line-height: $line-height-heading;
+    font-family: $font-family-heading;
+    color: $color-heading;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-h1;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-h2;
+}
+
+h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-h3;
+}
+
+h4 {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-h4;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+a, a:visited {
+    color: $color-text-link;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        color: lighten($color-text-link, 10%);
+    }
+
+    &:active {
+        color: darken($color-text-link, 10%);
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    @include media($min-width: $container-width) {
+        margin: 0 auto;
+        max-width: $container-width;
+    }
+
+    @include media($min-width: $container-width-wide) {
+        max-width: $container-width-wide;
+    }
+}
+
+
+/* Main section
+---------------------------------------- */
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    height: 100%;
+
+    .main-section {
+        flex-grow: 1;
+
+        .container {
+            padding: ($default-padding * 3) $default-padding;
+        }
+
+    }
+}
+
+
+/* UI Elements
+---------------------------------------- */
+button {
+    padding: 10px 20px;
+    margin: 0;
+    border: none;
+    border-radius: $btn-border-radius;
+    /* Needed to stop browser override */
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    text-transform: uppercase;
+    background: $color-background-button;
+    color: $color-text-button;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s;
+
+    &:hover,
+    &:focus {
+        background: lighten($color-background-button, 5%);
+    }
+    &:active {
+        background: darken($color-background-button, 5%);
+    }
+    &:disabled {
+        background: $color-disabled;
+        color: darken($color-disabled, 5%);
+        cursor: default;
+    }
+
+    // Fix for firefox weird button padding issue
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0
+    }
+}
+
+
+/* Error
+---------------------------------------- */
+.content.error-content {
+    padding: 230px 40px 40px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    @include media(desktop) {
+        padding: 320px 40px 120px;
+        border-radius: $border-radius-base;
+        background-position: center 130px;
+    }
+}

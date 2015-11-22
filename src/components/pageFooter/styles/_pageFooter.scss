@@ -1,0 +1,10 @@
+.footer-section {
+    background: $color-background-light;
+
+    .copyright {
+        margin: 10px auto;
+        text-align:  center;
+        font-size: $font-size-tiny;
+        color: darken($color-background-light, 30%);
+    }
+}

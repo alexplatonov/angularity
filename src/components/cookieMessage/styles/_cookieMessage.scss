@@ -1,0 +1,56 @@
+
+.cookie-message-section {
+    background-color: $color-highlight;
+    color: $color-text;
+    font-size: 14px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: $default-padding;
+
+        @include media($min-width: 390px) {
+            flex-direction: row;
+        }
+    }
+
+    .cookie-message {
+        margin: 0 0 10px;
+        padding: 0;
+
+        @include media($min-width: 390px) {
+            margin: 0 10px 0 0;
+
+        }
+    }
+
+    a {
+        color: lighten($color-highlight, 30%);
+
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        background-color: $color-highlight2;
+        color: $color-highlight;
+
+        @include media($min-width: 390px) {
+            width: auto;
+        }
+
+
+        &:hover, &:focus {
+            background-color: lighten($color-highlight2, 10%);
+        }
+        &:active {
+            background-color: darken($color-highlight2, 5%);
+        }
+    }
+}
+

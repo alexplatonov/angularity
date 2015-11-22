@@ -1,0 +1,68 @@
+// VARIABLES //
+
+// Colors
+// -------------------------
+$green-light:                       #BADA55;
+$green-dark:                        #406618;
+$grey-light:                        #DDDDDD;
+$grey-dark:                         #333333;
+$white:                             #FFFFFF;
+
+$color-highlight:                   $green-light;
+$color-highlight2:                  $green-dark;
+
+$color-background:                  $white;
+$color-background-light:            $grey-light;
+$color-background-dark:             $grey-dark;
+$color-background-button:           $color-highlight;
+
+$color-text:                        $grey-dark;
+$color-text-light:                  $white;
+$color-heading:                     $green-dark;
+$color-text-button:                 $white;
+$color-text-link:                   $color-highlight;
+
+$color-disabled:                    #E9E9E9;
+$color-error:                       #BE4212;
+$color-success:                     #8CBB14;
+
+
+// Typography
+// -------------------------
+$font-family-areal:         Arial, Helvetica, sans-serif;
+$font-family-base:          $font-family-areal;
+$font-family-heading:       $font-family-areal;
+
+$font-size-base:            16px;
+$font-size-large:           ceil($font-size-base * 1.25); // 18px
+$font-size-small:           ceil($font-size-base * 0.85); // 14px
+$font-size-tiny:            ceil($font-size-base * 0.75); // 12px
+
+$font-size-h1:              ceil($font-size-base * 2.00); // 32px
+$font-size-h2:              ceil($font-size-base * 1.62); // 26px
+$font-size-h3:              ceil($font-size-base * 1.25); // 20px
+$font-size-h4:              ceil($font-size-base * 1.25); // 18px
+
+$font-weight-h1:            normal;
+$font-weight-h2:            bold;
+$font-weight-h3:            bold;
+$font-weight-h4:            bold;
+
+$line-height-base:          1.5;
+$line-height-heading:       1;
+
+
+// Dimensions
+// -------------------------
+$container-width:           960px;
+$container-width-wide:      1200px;
+$border-radius-base:        10px;
+$default-padding:           15px;
+
+
+// Buttons
+// -------------------------
+$btn-font-size:             16px;
+$btn-font-weight:           normal;
+$btn-border-radius:         3px;
+

@@ -1,0 +1,64 @@
+{
+  "name": "Angularity",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexplatonov/angularity.git"
+  },
+  "author": {
+    "name": "Alex Platonov"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-cookies": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-sanitize": "~1.4.8",
+    "angular-touch": "~1.4.8"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.8",
+    "browser-sync": "~2.10.0",
+    "browser-sync-spa": "~1.0.3",
+    "chalk": "~1.1.1",
+    "del": "~2.0.2",
+    "gulp": "~3.9.0",
+    "gulp-angular-templates": "~0.0.2",
+    "gulp-autoprefixer": "~3.0.2",
+    "gulp-concat": "~2.6.0",
+    "gulp-csso": "~1.0.0",
+    "gulp-debug": "~2.1.1",
+    "gulp-eslint": "~1.0.0",
+    "gulp-extend": "~0.2.0",
+    "gulp-filter": "~2.0.2",
+    "gulp-if": "~2.0.0",
+    "gulp-imagemin": "~2.3.0",
+    "gulp-karma": "~0.0.5",
+    "gulp-livereload": "~3.8.1",
+    "gulp-load-plugins": "~1.1.0",
+    "gulp-newer": "~0.5.1",
+    "gulp-ng-annotate": "~1.1.0",
+    "gulp-plumber": "~1.0.1",
+    "gulp-replace": "~0.5.4",
+    "gulp-rev-all": "~0.7.6",
+    "gulp-sass": "~2.0.4",
+    "gulp-size": "~2.0.0",
+    "gulp-sourcemaps": "~1.6.0",
+    "gulp-special-html": "~0.0.4",
+    "gulp-strip-code": "~0.1.2",
+    "gulp-uglify": "~1.4.1",
+    "gulp-util": "~3.0.6",
+    "gulp-wrap": "~0.11.0",
+    "http-proxy": "~1.12.0",
+    "jasmine-core": "~2.3.4",
+    "karma": "~0.13.10",
+    "karma-coverage": "~0.5.2",
+    "karma-jasmine": "~0.3.6",
+    "karma-phantomjs-launcher": "~0.2.1",
+    "path": "~0.12.7",
+    "require-dir": "~0.3.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
