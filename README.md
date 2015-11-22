@@ -7,13 +7,13 @@ A scaffolding for building modular applications using angular.js
     brew install npm
     npm install -g gulp
 ```
-## Running localy
+## Running locally
 
-### Install node modules
+#### Install node modules
 ```shell
     npm install
 ```
-### Run gulp
+#### Run gulp
 ```shell
     gulp serve
 ```
@@ -24,4 +24,5 @@ A scaffolding for building modular applications using angular.js
 * Add more components
 * Add file versioning for production
 * Change logo
+* SEO stuff
 * Documentation
