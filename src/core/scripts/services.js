@@ -112,7 +112,7 @@ angular.module('angularity')
                 'event',
                 eventCategory,
                 eventType,
-                label
+                eventLabel
             );
         };
 

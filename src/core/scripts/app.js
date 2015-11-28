@@ -22,6 +22,10 @@ angular.module('angularity', [
             .when('/about', {
                 templateUrl: 'about/about.html',
                 controller: 'AboutController'
+            })
+            .otherwise({
+                templateUrl: '404/404.html',
+                controller: 'Error404Controller'
             });
 
         $locationProvider.html5Mode(true);
