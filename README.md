@@ -1,4 +1,4 @@
-#Angularity
+#Angularity [![Build Status](https://travis-ci.org/alexplatonov/angularity.svg?branch=master)](https://travis-ci.org/alexplatonov/angularity)
 
 A scaffolding for building modular applications using angular.js
 

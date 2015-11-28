@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - '4.2.1'
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  # Check the size of caches
+  - du -sh ./node_modules ./bower_components/ ./docs/bower_components/ || true
+  # Instal npm dependecies and ensure that npm cache is not stale
+  - npm install
+
+before_script:
+  - npm install -g gulp
+script:
+  - gulp test
