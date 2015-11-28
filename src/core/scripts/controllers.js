@@ -1,7 +1,7 @@
 
 angular.module('angularity')
 
-    .controller('CoreController', function($scope) {
+    .controller('CoreController', ($scope) => {
         $scope.hello = 'Hello Universe!';
 
     });

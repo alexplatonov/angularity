@@ -94,6 +94,8 @@ gulp.task('scripts', function() {
         .pipe($.if(env === 'production', $.stripCode({
             pattern: / *(\/\/)? *?console\.log\('?.*'?\);/g
         })))
+        .pipe($.replace(/(\.(config|run)\()/g, '$1 /*@ngInject*/ '))
+        .pipe($.replace(/(\.(controller|directive|factory|filter)\(\'\w*\',)/g, '$1 /*@ngInject*/'))
         .pipe($.babel({
             presets: ['es2015']
         }))
