@@ -47,6 +47,6 @@
     "space-infix-ops": 1,           // require spaces around operators
     "spaced-comment": [1, "always"],// require or disallow a space immediately following the // in a line comment (off by default)
     "quotes": [1, "single"],        // specify whether double or single quotes should be used
-
+    "indent": [2, 2]
   }
 }
