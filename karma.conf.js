@@ -72,9 +72,24 @@ module.exports = function(config) {
             // source files, that you wanna generate coverage for
             // do not include tests or libraries
             // (these files will be instrumented by Istanbul)
-            'src/core/scripts/{,**}/*.js': ['coverage'],
-            'src/components/{,**}/scripts/*.js': ['coverage'],
-            'src/views/{,**}/scripts/*.js': ['coverage']
+            'src/core/scripts/**/*.js': ['coverage', 'babel'],
+            'src/components/**/scripts/*.js': ['coverage', 'babel'],
+            'src/views/**/scripts/*.js': ['coverage', 'babel']
+        },
+
+
+        // Babel
+        babelPreprocessor: {
+            options: {
+                presets: ['es2015'],
+                sourceMap: 'inline'
+            },
+            filename: function (file) {
+                return file.originalPath.replace(/\.js$/, '.es5.js');
+            },
+            sourceFileName: function (file) {
+                return file.originalPath;
+            }
         },
 
         // Start these browsers, currently available:
