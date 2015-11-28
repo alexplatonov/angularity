@@ -4,7 +4,7 @@ angular.module('angularity', [
         'ngTouch',
         'ngRoute'
     ])
-    .config(function($httpProvider, $routeProvider, $locationProvider) {
+    .config(($httpProvider, $routeProvider, $locationProvider) => {
 
         // initialize get if not there
         if (!$httpProvider.defaults.headers.get) {

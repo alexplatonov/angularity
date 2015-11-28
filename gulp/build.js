@@ -94,7 +94,9 @@ gulp.task('scripts', function() {
         .pipe($.if(env === 'production', $.stripCode({
             pattern: / *(\/\/)? *?console\.log\('?.*'?\);/g
         })))
-
+        .pipe($.babel({
+            presets: ['es2015']
+        }))
         .pipe($.ngAnnotate())
         .pipe($.if(env === 'production', $.uglify()))
         .pipe($.concat('app.js'))
