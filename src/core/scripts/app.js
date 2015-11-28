@@ -1,4 +1,5 @@
-angular.module('angularity', [
+angular.module('angularity',
+  [
     'ngSanitize',
     'ngCookies',
     'ngTouch',
@@ -34,10 +35,10 @@ angular.module('angularity', [
   .run(function($rootScope, $location, $timeout, $filter, $window, googleAnalytics, dataService) {
 
     var setRootParams = function() {
-        $rootScope.appName = $window.appConfig.appName;
-        // Hardcoding locale for now
-        $rootScope.locale = 'en_GB';
-      };
+      $rootScope.appName = $window.appConfig.appName;
+      // Hardcoding locale for now
+      $rootScope.locale = 'en_GB';
+    };
 
     $rootScope.loading = {
       start: function() {
