@@ -95,7 +95,14 @@ gulp.task('scripts', function() {
             pattern: / *(\/\/)? *?console\.log\('?.*'?\);/g
         })))
 
+        // auto-insert nginject for babel/ES6 ng-annotation issues for injection
+        .pipe($.replace(/(\.(config|run)\()/g, '$1 /*@ngInject*/ '))
+        .pipe($.replace(/(\.(controller|directive|factory|filter)\(\'\w*\',)/g, '$1 /*@ngInject*/'))
         .pipe($.ngAnnotate())
+
+        .pipe($.babel({
+            presets: ['es2015']
+        }))
         .pipe($.if(env === 'production', $.uglify()))
         .pipe($.concat('app.js'))
         .pipe(gulp.dest(path.join(folders.dest, folders.scripts)))

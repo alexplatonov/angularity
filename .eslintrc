@@ -3,13 +3,14 @@
   "env": {
     "browser": true,
     "node": true,
-    "jasmine": true
+    "jasmine": true,
+    "es6": true
   },
 
   "globals": {
     "angular": true,
     "Modernizr" : true,
-    "ga": true,
+    "ga": true
   },
 
   "rules": {
